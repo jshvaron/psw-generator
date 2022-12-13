@@ -4,7 +4,7 @@ var upperCase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 var lowerCase = ["abcdefghijklmnopqrstuvwxyz"];
 var number = ["1234567890"];
 var specialCharacters = ["!@#$%^&*?=+"];
-var fullArray = []
+var completeArray = []
 
 // First prompt selects length and alerts if invalid
 function generatePassword(){
@@ -14,6 +14,17 @@ function generatePassword(){
     alert("Your character length of: " + psw + " is invalid. Please select a character length of 8-128" )
     return;
   }
+     // This if statement is for the upperrcase confirmation prompt and adds uppercase characters
+  if ( confirm('Will you need uppercase characters?')){
+    completeArray = completeArray.concat(upperCase);
+  }
+
+   // This if statement is for the lowercase confirmation prompt and adds lowercase characters
+  if(confirm('Will you need lowercase characters?')){
+    completeArray = completeArray.concat(lowerCase);
+  }
+
+
 }
 
 
