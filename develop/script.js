@@ -23,6 +23,15 @@ function generatePassword(){
   if(confirm('Will you need lowercase characters?')){
     completeArray = completeArray.concat(lowerCase);
   }
+  // This if statement is for the numerics confirmation prompt and adds numeric characters
+  if(confirm('Will you need Numerical characters?')){
+    completeArray = completeArray.concat(number);
+  }
+
+
+
+
+
 
 
 }
